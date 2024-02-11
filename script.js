@@ -4,20 +4,28 @@ LAB 5 - Translation and Rotation
 Move the origin point with translate() so the image appears in the center of the canvas. Then, add a conditional statement that controls the canvas rotation.
 
 */
-
+var a = 0
 function setup() {
   createCanvas(400, 300);
   console.log("Lab 5 - Translation and Rotation");
 }
 
 function draw() {
-  background(200);
+  background(100);
   
   push(); // create a new temporary drawing layer
-  translate(0, 0); // change these arguments
+  ellipse(width/2, height/2, 100)
+  pop();
+  push();
+  translate(mouseX, mouseY); // change these arguments
   
   //add an if() statement here
-  
+  if (mouseIsPressed){
+    a = a + .1;
+  } else {
+    a = 0;
+  }
+  rotate(a);
   line(0, -50, 40, -20);
   line(0, -50, -40, -20);
   fill(255);
