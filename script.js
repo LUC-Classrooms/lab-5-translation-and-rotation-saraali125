@@ -42,7 +42,7 @@ function draw() {
   ellipse(0, -40, 5);
   ellipse(0, -30, 5);
   ellipse(0, -20, 5);
-
+  
   pop(); // dispose of the drawing layer
 }
 
